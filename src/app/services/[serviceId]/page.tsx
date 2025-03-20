@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 
-type DynamicPageProps =  {
+type DynamicPageProps = {
   params: {
     serviceId: string;
   };
-}
+};
 
-export const generateMetadata = ({params} : DynamicPageProps) : Metadata=> {
-     return {
-        title: `Service ${params.serviceId}`
-     }
+export const generateMetadata = ({ params }: DynamicPageProps): Metadata => {
+  return {
+    title: `Service ${params.serviceId}`,
+  };
 };
 
 export default function ServiceList({ params }: DynamicPageProps) {
